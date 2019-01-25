@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+    #box1 { color: purple; }
+    .red { color: red; }
+    .orange { color: orange; }
+    .green { color: green; }
+    /*
+    #box1 .box-1-1
+    The space means .box-1-1 is within #box1
+    no matter the parent/child relationship
+    */
+    /* #box1 .box-1-1 {
+      background: black; color: white;
+    } */
+
+    /*
+    This means that .box-1-1 is an immidiate
+    child of #box1
+    */
+    /* #box1 > .box-1-1 {
+      background: black; color: white;
+    } */
+
+    /*
+    The comman means inclusion. The css rules
+    Will be applied to both #box2 AND #box3
+    */
+    #box2, #box3 {
+      font-size: 23px;
+    }
+  </style>
+</head>
+<body>
+  <div id="box1" class="box red">
+    Box 1
+    
+    <div>
+      Box 1.2
+      <div class="box-1-1">Box 1.1</div>
+    </div>
+    <div class="box-1-1">Box 1.1!!!</div>
+  </div>
+  <div id="box2">Box 2</div>
+  <div id="box3" class="box orange">Box 3</div>
+  <div class="box orange">Box 4</div>
+  <div class="box green">Box 5</div>
+  <div class="box green">Box 6  </div>
+</body>
+</html>
