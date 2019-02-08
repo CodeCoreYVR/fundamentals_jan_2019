@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<style>
+			#parent-box {
+				background-color: aqua;
+				padding: 20px;
+				padding-left: 100px;
+			}
+
+			#parent-box .box {
+				width: 100px;
+				height: 100px;
+				background-color: red;
+			}
+
+			#parent-box span {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="parent-box">
+			<div>
+				<div class="box">Box 1</div>
+				<span>This is inline by default</span>
+				<span>This is inline by default</span>
+				<span>This is inline by default</span>
+				<span>This is inline by default</span>
+			</div>
+		</div>
+		<div class="box">Box 2</div>
+		<span>This is inline by default</span>
+		<span>This is inline by default</span>
+	</body>
+</html>

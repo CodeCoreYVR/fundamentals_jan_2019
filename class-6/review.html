@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<style>
+			/* This uses a css selector to select all elements that are h3 tags */
+			h3 {
+				color: darkgoldenrod;
+				background-color: navy;
+			}
+
+			.highlight {
+				background-color: chartreuse;
+			}
+
+			#smallest-title {
+				color: hotpink;
+			}
+			div {
+				display: inline;
+			}
+			.block {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Only "code" typed within the body tags will show up on the page -->
+		Some text here
+		<!-- h1,h2,h3,h4,h5,h6 and div are examples of block-elements -->
+		<!-- These elements get their own lines -->
+		<h1 style="color: blue;">Biggest</h1>
+		<!-- using the style attribute directly on an html tag is called inline-styling -->
+		<h2 style="background-color:crimson;">Still Big</h2>
+		<h3>Medium Big</h3>
+		<h4 class="highlight">Medium Small</h4>
+		<h5 class="highlight">Small</h5>
+		<h6 id="smallest-title">Smallest</h6>
+		<div>
+			this is going to be on a new line too
+		</div>
+		<!-- span on the other hand is a called an inline-element -->
+		<!-- That means it does not get its own line -->
+		<!-- The following spans show up beside each other in the browser -->
+		<span>This is some text</span>
+		<span class="block">This text will be on the same line</span>
+		<!-- Semantic Tags for HTML5 -->
+		<main>This is the main</main>
+		<section></section>
+		<aside></aside>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<style>
+			@media (min-width: 800px) {
+				div {
+					background-color: blue;
+					width: 500px;
+					height: 300px;
+				}
+			}
+			/* The order of the media queries matters
+            the queries that come second take precedence if multiple match
+            the current screen size */
+			@media (min-width: 1000px) {
+				div {
+					background-color: yellow;
+					width: 800px;
+					height: 600px;
+				}
+			}
+			@media (max-width: 800px) {
+				div {
+					background-color: crimson;
+					height: 100px;
+					width: 100px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

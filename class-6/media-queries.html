@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<style>
+			/* This media query applies to all screens larger than 800px */
+			@media (min-width: 800px) {
+				div {
+					background-color: blue;
+				}
+			}
+			/* This query applies to all screens smaller than 800px */
+			@media (max-width: 800px) {
+				div {
+					background-color: yellow;
+				}
+			}
+
+			@media (max-width: 600px) {
+				div {
+					background-color: green;
+				}
+			}
+
+			@media (max-width: 400px) {
+				div {
+					background-color: red;
+				}
+			}
+
+			div {
+				height: 100px;
+				width: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>Hello World</div>
+	</body>
+</html>
