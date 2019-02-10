@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<style>
+			.highlight {
+				background-color: yellow;
+			}
+		</style>
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+			crossorigin="anonymous"
+		></script>
+		<script>
+			$(document).ready(function() {
+				console.log('This is the scriipt tag');
+				console.log($('h1'));
+				console.log('text:', $('#my-element').text());
+				$('h1, div').on('mouseenter', function() {
+					$(this).attr('class', 'highlight');
+				});
+				$('h1, div').on('mouseleave', function() {
+					$(this).attr('class', '');
+				});
+				$('#my-element').on('click', function() {
+					alert('You clicked me!!!!');
+				});
+				$('#current-time').html(new Date().toLocaleTimeString());
+				setInterval(function() {
+					$('#current-time').html(new Date().toLocaleTimeString());
+				}, 1000);
+
+				let timingNumber = 0;
+				let intervalId;
+				$('#start').on('click', function() {
+					intervalId = setInterval(function() {
+						timingNumber++;
+						$('#timer').html(`${timingNumber}`);
+					}, 1000);
+				});
+
+				$('#stop').on('click', function() {
+					clearInterval(intervalId);
+				});
+
+				$('#reset').on('click', function() {
+					timingNumber = 0;
+					$('#timer').html(timingNumber);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Welcome to my Awesome App</h1>
+		<div id="my-element">Box 1</div>
+		<div id="current-time"></div>
+		<div id="timer">0</div>
+		<button id="start">Start</button>
+		<button id="stop">Stop</button>
+		<button id="reset">Reset</button>
+	</body>
+</html>

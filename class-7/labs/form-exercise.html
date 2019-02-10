@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+			crossorigin="anonymous"
+		></script>
+		<script>
+			$(document).ready(function() {
+				// In the event that the form was submitted
+				$('#user-form').on('submit', function(event) {
+					event.preventDefault(); // prevents form from reloading page
+					const value = $('input').val(); // gets the value of the input field
+					// if form was not empty
+					if (value) {
+						// add a new row to our form based on the value in the text field
+						$('tbody').append(`<tr><td>${value}</td></tr>`);
+						// reset the form (remember `this` refers to the form)
+						this.reset();
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Enter a New Name</h1>
+		<form id="user-form">
+			<input type="text" />
+			<button type="submit">Submit</button>
+		</form>
+		<h1>Names Table</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Names</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</body>
+</html>
