@@ -1,0 +1,11 @@
+span.input-group-text {
+	background-color: white;
+}
+
+.todo-header {
+	border-bottom: 1px solid black;
+}
+
+.example {
+	color: red;
+}
